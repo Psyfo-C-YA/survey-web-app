@@ -1,0 +1,251 @@
+<html>
+  <head>
+    <meta charset='UTF-8' />
+    <title>Survey</title>
+    <link rel='stylesheet' href='/styles.css' />
+    <link
+      rel='stylesheet'
+      href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'
+    />
+  </head>
+  <body>
+    <div class='container mt-2 center'>
+      <h1 class='mt-5'>Survey</h1>
+      <form id='myForm' action='/survey' method='post'>
+        <div class='mb-3'>
+          <label for='surname'>Surname:</label>
+          <input type='text' name='surname' class='form-control' required />
+        </div>
+        <div class='mb-3'>
+          <label for='name' class='form-label'>Name:</label>
+          <input type='text' name='name' class='form-control' required />
+        </div>
+        <div class='mb-3'>
+          <label for='number'>Contact number:
+            <span style='color: grey;'>(27)</span></label>
+          <input type='number' name='number' class='form-control' required />
+        </div>
+        <div class='mb-3'>
+          <label for='date'>Date:</label>
+          <input type='date' name='date' class='form-control' required />
+        </div>
+        <div class='mb-3'>
+          <label id='age' for='age'>Age:
+            <span style='color: grey;'>(5 - 120)</span></label>
+          <input
+            size='26px'
+            type='number'
+            name='age'
+            class='form-control'
+            required
+          />
+        </div>
+        <div class='mb-3'>
+          <label>What is your favourite food? (You can choose more than 1
+            answer):
+            <span style='color: grey;'>Choose at least one option</span></label>
+          <br />
+          <input type='checkbox' name='foodChoices' value='Pizza' />
+          <label style='margin-left: 5px;'>Pizza</label>
+          <br />
+          <input type='checkbox' name='foodChoices' value='Pasta' />
+          <label style='margin-left: 5px;'>Pasta</label>
+          <br />
+          <input type='checkbox' name='foodChoices' value='Pap and Wors' />
+          <label style='margin-left: 5px;'>Pap and Wors</label>
+          <br />
+          <input type='checkbox' name='foodChoices' value='Chicken Stir Fry' />
+          <label style='margin-left: 5px;'>Chicken Stir Fry</label>
+          <br />
+          <input type='checkbox' name='foodChoices' value='Beef Stir Fry' />
+          <label style='margin-left: 5px;'>Beef Stir Fry</label>
+          <br />
+          <input type='checkbox' name='foodChoices' value='Other' />
+          <label style='margin-left: 5px;'>Other</label>
+        </div>
+        <div class='mb-3'>
+          <label>On a scale 0f 1 to 5 indicate whether you strongly agree to
+            strongly disagree:</label>
+          <br />
+          <label for='eat-out'>I like to eat out:</label>
+          <input
+            type='radio'
+            id='eat-out-strongly-agree'
+            name='eatOutRating'
+            value='1'
+            style='margin-left: 120px;'
+          />
+          <label for='eat-out-strongly-agree'>Strongly Agree</label>
+          <input
+            type='radio'
+            id='eat-out-agree'
+            name='eatOutRating'
+            value='2'
+            style='margin-left: 10px;'
+          />
+          <label for='eat-out-agree'>Agree</label>
+          <input
+            type='radio'
+            id='eat-out-neutral'
+            name='eatOutRating'
+            value='3'
+            style='margin-left: 10px;'
+          />
+          <label for='eat-out-neutral'>Neutral</label>
+          <input
+            type='radio'
+            id='eat-out-disagree'
+            name='eatOutRating'
+            value='4'
+            style='margin-left: 10px;'
+          />
+          <label for='eat-out-disagree'>Disagree</label>
+          <input
+            type='radio'
+            id='eat-out-strongly-disagree'
+            name='eatOutRating'
+            value='5'
+            style='margin-left: 10px;'
+          />
+          <label for='eat-out-strongly-disagree'>Strongly Disagree</label>
+          <br />
+          <label for='watch-movies'>I like to watch movies:</label>
+          <input
+            type='radio'
+            id='watch-movies-strongly-agree'
+            name='watchMoviesRating'
+            value='1'
+            style='margin-left: 75px;'
+          />
+          <label for='watch-movies-strongly-agree'>Strongly Agree</label>
+          <input
+            type='radio'
+            id='watch-movies-agree'
+            name='watchMoviesRating'
+            value='2'
+            style='margin-left: 10px;'
+          />
+          <label for='watch-movies-agree'>Agree</label>
+          <input
+            type='radio'
+            id='watch-movies-neutral'
+            name='watchMoviesRating'
+            value='3'
+            style='margin-left: 10px;'
+          />
+          <label for='watch-movies-neutral'>Neutral</label>
+          <input
+            type='radio'
+            id='watch-movies-disagree'
+            name='watchMoviesRating'
+            value='4'
+            style='margin-left: 10px;'
+          />
+          <label for='watch-movies-disagree'>Disagree</label>
+          <input
+            type='radio'
+            id='watch-movies-strongly-disagree'
+            name='watchMoviesRating'
+            value='5'
+            style='margin-left: 10px;'
+          />
+          <label for='watch-movies-strongly-disagree'>Strongly Disagree</label>
+          <br />
+          <label for='watch-tv'>I like to watch TV:</label>
+          <input
+            type='radio'
+            id='watch-tv-strongly-agree'
+            name='watchTVRating'
+            value='1'
+            style='margin-left: 105px;'
+          />
+          <label for='watch-tv-strongly-agree'>Strongly Agree</label>
+          <input
+            type='radio'
+            id='watch-tv-agree'
+            name='watchTVRating'
+            value='2'
+            style='margin-left: 10px;'
+          />
+          <label for='watch-tv-agree'>Agree</label>
+          <input
+            type='radio'
+            id='watch-tv-neutral'
+            name='watchTVRating'
+            value='3'
+            style='margin-left: 10px;'
+          />
+          <label for='watch-tv-neutral'>Neutral</label>
+          <input
+            type='radio'
+            id='watch-tv-disagree'
+            name='watchTVRating'
+            value='4'
+            style='margin-left: 10px;'
+          />
+          <label for='watch-tv-disagree'>Disagree</label>
+          <input
+            type='radio'
+            id='watch-tv-strongly-disagree'
+            name='watchTVRating'
+            value='5'
+            style='margin-left: 10px;'
+          />
+          <label for='watch-tv-strongly-disagree'>Strongly Disagree</label>
+          <br />
+          <label for='listen-radio'>I like to listen to the radio:</label>
+          <input
+            type='radio'
+            id='listen-radio-strongly-agree'
+            name='listenRadioRating'
+            value='1'
+            style='margin-left: 46px;'
+          />
+          <label for='listen-radio-strongly-agree'>Strongly Agree</label>
+          <input
+            type='radio'
+            id='listen-radio-agree'
+            name='listenRadioRating'
+            value='2'
+            style='margin-left: 10px;'
+          />
+          <label for='listen-radio-agree'>Agree</label>
+          <input
+            type='radio'
+            id='listen-radio-neutral'
+            name='listenRadioRating'
+            value='3'
+            style='margin-left: 10px;'
+          />
+          <label for='listen-radio-neutral'>Neutral</label>
+          <input
+            type='radio'
+            id='listen-radio-disagree'
+            name='listenRadioRating'
+            value='4'
+            style='margin-left: 10px;'
+          />
+          <label for='listen-radio-disagree'>Disagree</label>
+          <input
+            type='radio'
+            id='listen-radio-strongly-disagree'
+            name='listenRadioRating'
+            value='5'
+            style='margin-left: 10px;'
+          />
+          <label for='listen-radio-strongly-disagree'>Strongly Disagree</label>
+
+        </div>
+        <!-- Add other fields as required -->
+
+        <button
+          type='submit'
+          class='btn btn-outline-dark btn-lg'
+          style='margin-bottom: 10px;'
+        >Submit</button>
+      </form>
+    </div>
+    <script src='/scripts.js'></script>
+    <script src='/validateCheckbox.js'></script>
+  </body>
+</html>

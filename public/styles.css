@@ -1,0 +1,19 @@
+html,
+body {
+  height: 100%;
+}
+
+.center-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.custom-btn {
+  width: 50%;
+}
+
+.label-checkbox {
+  margin-right: 10px; /* Adjust the value as needed */
+}
